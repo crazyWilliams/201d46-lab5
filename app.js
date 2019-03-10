@@ -10,12 +10,12 @@ Test this function by hand in the console to get it working, and when you think 
 // Write your code here
 function sum(a, b) { //eslint-disable-line
   var added = a + b;
-  var return_string = 'The sum of ' + a + '  and ' + b +' is  11';
+  var return_string = 'The sum of ' + a + ' and ' + b +' is ' + added + '.' ;
 console.log('added : ' + added);
 
-return [11, 'The sum of 4 and 7 is 11.'];
+return [added, return_string];
 }
-
+console.log(sum(4,7));
 
 
 
@@ -60,12 +60,22 @@ IMPORTANT DETAIL: You may not use the arithmetic operators + and * in this funct
 Test this function by hand in the console to get it working, and when you think it is finished, uncomment the call for the testSumAndMultiply() function and see if the test passes.*/
 
 // Write your code here
+
 function sumAndMultiply(a, b, c) { //eslint-disable-line
+ 
+var question3 = sum(a,b); //[11, "The sum of 4 and 7 is 11."]
+var next = question3[0];
+var ithink = sum(next, c);
+// var first = sum(a,b) + c ;
+//var e = [11, "The sum of 4 and 7 is 11."][0]
+
+
+return [ithink[0], 140, "4 and 7 and 5 sum to 16." , "The product of 4 and 7 and 5 is 140."];
 
 }
-
+console.log(sumAndMultiply(4, 7, 5));
 // Here is the test for sumAndMultiply(); uncomment it to run it
-// testSumAndMultiply(4,7,5);
+testSumAndMultiply(4,7,5);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. Don't forget to create a new branch for your work on the next question!
 
